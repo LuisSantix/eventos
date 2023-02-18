@@ -1,0 +1,178 @@
+/*Configuraciones generales*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #dceb8c;
+    /*overflow: hidden;*/
+}
+
+nav {
+    background: #07f03a;
+    height: 80px;
+    position: relative;
+}
+
+/*Elementos de la barra de navegacion*/
+.container {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    line-height: 80px;
+    z-index: 100;
+}
+
+.container_logo{
+    margin-left: 20px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.titulo {
+    color: aliceblue;
+    font-weight: 300;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+}
+
+.titulo span {
+    color: rgb(21, 26, 26);
+    font-weight: 700;
+}
+
+.container-links .link {
+    display: inline-block;
+}
+
+.container-links .link a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin: 0 25px;
+    padding: 5px;
+    letter-spacing: 3px;
+    transition: .4s;
+    border: solid 1px black;
+    border-radius: 7px;
+}
+
+
+.container-links .link a:hover {
+    color: #dceb8c;
+    background: black;
+    border-radius: 0;
+}
+
+
+.toggle {
+    color: black;
+    margin-right: 20px;
+    font-size: 30px;
+    transform: rotate(90deg);
+    cursor: pointer;
+    transition: .3s;
+    display: none;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 800px) {
+    .toggle{
+        display: inline-block;
+    }
+    nav { 
+        z-index: 1;
+    }
+
+    .container-links{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: #07f03a;
+        text-align: center;
+        overflow: hidden;
+        height: calc(100vh - 80px);
+        width: 100%;
+        z-index: -1;
+        top: -100vh;
+        transition: .5s;
+    }
+
+    .active {
+        top: 80px;
+    }
+
+    .container-links .link:hover {
+        background: #dceb8c;
+    }
+}
+
+/*Catalogo de productos*/
+.products-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.titulo-catalogo {
+    text-align: center;
+    font-weight: bold;
+    margin: 30px;
+    font-size: 25px;
+}
+
+.box { 
+    margin: 15px;
+    padding: 5px;
+    transition: .3s;
+}
+
+.box:hover{
+    box-shadow: 0 5px 10px rgba(73, 3, 6, 0.7);
+    background-color: aliceblue;
+}
+
+.box img{
+    width: 360px;
+    height: 300px;
+    border-radius: 15px;
+}
+
+.box p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.products-container a{
+    text-decoration: none;
+    color: black;
+}
+
+.redondeado {
+    background: #07f03a;
+    color: black;
+    font-size: 20px;
+    margin: 0 25px;
+    padding: 5px;
+    letter-spacing: 3px;
+    transition: .4s;
+    border: solid 1px black;
+    border-radius: 7px;
+}
+
+.redondeado:hover {
+    color: #dceb8c;
+    background: black;
+    border-radius: 0;
+}
